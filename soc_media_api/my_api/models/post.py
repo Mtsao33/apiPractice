@@ -7,6 +7,10 @@ class UserPostIn(BaseModel):  # we make classes for each resource we take in
 
 class UserPost(UserPostIn):
     id: int
+    user_id: int
+
+    class Config:
+        orm_mode = True # return_value["body"] or return_value.body (second works with sqlchemy rows)
 
 
 class CommentIn(BaseModel):
@@ -16,6 +20,10 @@ class CommentIn(BaseModel):
 
 class Comment(CommentIn):
     id: int  # identifies each comment uniquely
+    user_id: int 
+    
+    class Config:
+        orm_mode = True 
 
 
 class UserPostWithComments(BaseModel):

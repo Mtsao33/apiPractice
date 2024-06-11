@@ -1,3 +1,10 @@
 fastapi
 uvicorn[standard]
+sqlalchemy
+databases[aiosqlite]
+pydantic==1.10 
+python-dotenv
+python-jose
+python-multipart
+passlib[bcrypt]
 # run pip install -r requirements.txt 

@@ -6,3 +6,7 @@ __pycache__
 .venv
 .vscode/
 *.png
+venv 
+venv/*  
+*/venv/*
+*.txt
